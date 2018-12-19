@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    function displayTime() {
+        now = new Date();
+        document.getElementById('output').innerHTML = now;
+        month = now.getMonth();
+        day = now.getDay();
+        hour = now.getHour();
+        year = now.getFullYear();
+        document.getElementById('output').innerHTML + "month:" + month + day+ hour+ year;
+
+
+
+    }
+    </script>
+</head>
+<body>
+    <button onclick="displayTime()">show time</button>
+    <span id="output"></span>
+</body>
+</html>

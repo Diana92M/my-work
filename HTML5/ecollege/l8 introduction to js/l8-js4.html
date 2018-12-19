@@ -1,0 +1,33 @@
+<!-- use jquery -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>first jquery</title>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.js"></script>
+  <script type="text/javascript">
+  //once the html documents loads, execute the functions within ready 
+
+
+  $(document).ready(function() {
+
+
+    $("p").click(function() {
+      $(this).hide();
+    });
+
+
+
+  });
+  </script>
+</head>
+<body>
+  <p>this is first paragraph. click me to make me disappear</p>
+  <p>this is second paragraph</p>
+  <p> this is third paragraph</p>
+
+</body>
+</html>

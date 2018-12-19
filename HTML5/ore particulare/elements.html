@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="addField()">+</button>
+        <button onclick="removeField()">-</button>
+        <script>
+            //
+        function addField() {
+            var body = document.querySelector('body') 
+            // console.log( body )
+            console.dir(body)
+            //body.innerHTML += '<br><input type="text">';
+            //body.innerHTML =   body.innerHTML+ '<br><input type="text">';
+            var br    = document.createElement('br');    
+            var input = document.createElement('input');  
+            
+            body.appendChild( br );
+            body.appendChild( input );
+
+            // DOM -> String -> DOM (states,values,....)
+
+        }
+        function removeField(){
+            var last_input = document.querySelector('input:last-child') 
+            document.body.removeChild( last_input );
+            var last_br    = document.querySelector('br:last-child')
+            document.body.removeChild( last_br );
+           // console.log( last_input )
+        }
+        </script>
+        <!-- aici apar cimpurile -->
+        
+    </body>
+</html>
+

@@ -1,0 +1,29 @@
+<!-- inserting server files -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    function loadContent() {
+      var imghttp = new XMLHttpRequest();
+      imghttp.onreadystatechange = function() {
+        alert();
+        if( imghttp.readyState==4 & imghttp.status==200) {
+          document.getElementById('output').innerHTML = imghttp.responseText;
+         
+        }
+      }
+      imghttp.open('GET', 'apples.html', 'true');
+      imghttp.send();
+    }
+  </script>
+</head>
+<body>
+  <div id="output">  </div>
+  <button type="button" id="loadit" onclick="loadContent()">load an image</button>
+ 
+</body>
+</html>

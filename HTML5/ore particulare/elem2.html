@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="price-list">
+        <table>
+            <tr>
+                <td>cafea</td>
+                <td>1</td>
+                <td><span>3 </span>lei</td>
+                <td>
+                    <button onclick="buy()">Cumpara</button>
+                </td>
+            </tr>
+            <tr>
+                <td>lapte</td>
+                <td>2</td>
+                <td><span>2 </span>lei</td>
+                <td>
+                    <button onclick="buy()">Cumpara</button>
+                </td>
+            </tr>
+            <tr>
+                <td>paine</td>
+                <td>7</td>
+                <td><span>5 </span>lei</td>
+                <td>
+                    <button onclick="buy()">Cumpara</button>
+                </td>
+            </tr>
+            <tr>
+                <td>ceai</td>
+                <td>0</td>
+                <td><span>2 </span>lei</td>
+                <td>
+                    <button onclick="buy()">Cumpara</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="form">
+
+    </div>
+    <script>
+       function buy() {
+        //    console.log(event.target.parentElement.previousElementSibling.previousElementSibling);
+            var name = event
+                          .target
+                          .parentElement
+                          .previousElementSibling
+                          .previousElementSibling
+                          .previousElementSibling
+                          .innerHTML;
+            var pret = event
+                            .target
+                            .parentElement
+                            .previousElementSibling
+                            .firstElementChild
+                            .innerHTML;
+             var cant = event
+                            .target
+                            .parentElement
+                            .previousElementSibling
+                            .previousElementSibling
+                            .innerHTML;
+            // alert (name+pret+cant);  
+            order(name, pret, cant)
+
+
+
+
+       }
+       function order(n,p,c){
+          //alert (n)
+          var form = document.getElementById('form');
+          form.innerHTML = "";
+          var input = document.createElement('input');
+          input.placeholder = "Cantitatea";
+          form.appendChild(input);
+          
+          var button= document.createElement('button');
+          button.innerHTML = 'comanda';
+          button.onclick = function(){
+              
+              if (input.value<=c){
+                  alert(input.value * p)
+              }    
+              else{
+                    alert('Nu dispunem de atitea produse')
+              }
+          }
+          form.appendChild(button);
+
+       }
+    
+    </script>
+</body>
+</html>

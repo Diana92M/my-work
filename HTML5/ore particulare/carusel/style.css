@@ -1,0 +1,7 @@
+#poze img{
+height: 200px;
+}
+
+#poze .slide div {
+    display: none;
+}

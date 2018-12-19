@@ -1,0 +1,34 @@
+<!-- drawing lines -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+  <script type="text/javascript">
+  window.onload  = function() {
+    var canvas = document.getElementById('canvas')
+    
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.moveTo(100,100);
+    context.lineTo(300,300);
+    context.quadraticCurveTo(230,200,150,100);
+    context.lineTo(300,350);
+
+    context.lineWidth = 5;
+    context.strokeStyle = "rgb(0,0,225)";
+    context.stroke();
+  }
+  </script>
+</head>
+<body>
+  <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+</html>

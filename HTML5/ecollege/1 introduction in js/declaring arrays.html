@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fiecate din array sunt egale ca importanta...asa ca putem sa alegem una din metode :
+        //1 metoda :
+        var airlines = new Array();
+            airlines[0] = 'delta';
+            airlines[1] = 'ailine';
+            airlines[2] = 'american';
+        
+        //2 metoda:
+        var family = new Array('Diana', 'Mihai', "Emilia");
+        //3 metoda:
+        var states = ['bray', 'swords', "wicklow"];
+
+        function output() {
+            document.getElementById('output').innerHTML = airlines[0] + '<br/>' + family[0] + '<br/>' + states[0];
+        }
+
+        </script>
+        <p id="output"></p>
+        <button onclick="output()">output</button>
+</body>
+</html>

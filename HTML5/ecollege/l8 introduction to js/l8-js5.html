@@ -1,0 +1,46 @@
+<!-- using local storage  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+
+   // element.addEventListener( "click" , function(){} )
+   // element.addEventListener( "click" , function_name )
+   // function function_name (){}
+
+  var first, last, oFirst, oLast;
+  window.onload=function(){ // $(document).ready()
+    first= document.getElementById('first')
+    last= document.getElementById('last')
+    oFirst=document.getElementById('fnameOutput')
+    oLast=document.getElementById('lnameOutput')
+    document.getElementById("storeData").addEventListener("click", storeData, false);
+    document.getElementById('retreieveData').addEventListener('click', retreieveData, false);
+  }
+   function storeData(){
+     localStorage.firstName = first.value;
+     localStorage.lastName = last.value;
+    
+   }
+   function retreieveData(){
+     oFirst.innerHTML = localStorage.firstName;
+     oLast.innerHTML = localStorage.lastName;
+   }
+  </script>
+</head>
+<body>
+  <label for="">first name</label><input type="text" id="first" name="" value=""><br>
+  <label for="">last name</label><input type="text" id="last" name="" value=""><br>
+  <button type="button" id="storeData" name="button">store button</button>
+  <div id="output">
+    first name <output name="result" id="fnameOutput"></output><br>
+    last name <output name="result" id="lnameOutput"></output><br>
+  </div>
+  <button type="button" name="button" id="retreieveData">retrieve data</button>
+</body>
+</html>

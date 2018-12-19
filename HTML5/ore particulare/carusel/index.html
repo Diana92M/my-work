@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+    
+</head>
+<body>
+
+<div id="poze">
+    <div class="slide">
+        <div>
+            <img src="poze/1.jpg" alt="">
+            <h2>slide 1</h2>
+        </div>
+        <div>
+            <img src="poze/2.jpg" alt="">
+            <h2>slide 2</h2>
+        </div>
+        <div>
+            <img src="poze/3.jpg" alt="">
+            <h2>slide 3</h2>
+        </div>
+    </div>
+    <div class="paginator">
+        <button onclick="showslide(0)">1</button>
+        <button onclick="showslide(1)">2</button>
+        <button onclick="showslide(2)">3</button>
+    </div>
+    <div class="navigation">
+        <button onclick="showslide(--currentSlide)">&lt;</button>
+        <button onclick="showslide(++currentSlide)">&gt;</button>
+    </div>
+</div>
+
+<script src="myjavascript.js"></script>
+</body>
+</html>

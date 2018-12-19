@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script type="text/javascript">
+  function move_paragraph() {
+      next = current + "px" ; 
+      current += 1 ;
+      if (current > 300) {
+          current = 0
+      }
+      paragraph.style.left = next;
+      var rate = 18;
+      setTimeout(move_paragraph, rate);
+  }
+  function init() {
+      paragraph = document.getElementById("original");
+      paragraph.style.position = "absolute";
+      current = 0;
+      move_paragraph();
+  }
+</script>
+</head>
+<body onload = "init();">
+  <h1>Animate with Java script</h1>  
+  <p id="original">do you see me scrolling acress the screen?</p>
+</body>
+</html>
